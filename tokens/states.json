@@ -1,0 +1,49 @@
+{
+  "state": {
+    "hover": {
+      "opacity":          { "$value": "0.85",  "$type": "number" },
+      "surface-overlay":  { "$value": "rgba(0,0,0,0.04)", "$type": "color" }
+    },
+    "active": {
+      "opacity":          { "$value": "0.75",  "$type": "number" },
+      "surface-overlay":  { "$value": "rgba(0,0,0,0.08)", "$type": "color" }
+    },
+    "disabled": {
+      "opacity":          { "$value": "0.4",   "$type": "number" },
+      "cursor":           { "$value": "not-allowed", "$type": "other" }
+    },
+    "focus": {
+      "ring-color":       { "$value": "{color.blue.500}", "$type": "color" },
+      "ring-width":       { "$value": "2px",   "$type": "dimension" },
+      "ring-offset":      { "$value": "2px",   "$type": "dimension" },
+      "ring-style":       { "$value": "solid",  "$type": "other" }
+    },
+    "selected": {
+      "background":       { "$value": "{color.brand.subtle}", "$type": "color" },
+      "border":           { "$value": "{color.brand.primary}", "$type": "color" },
+      "text":             { "$value": "{color.brand.primary}", "$type": "color" }
+    },
+    "error": {
+      "border":           { "$value": "{color.feedback.error}", "$type": "color" },
+      "text":             { "$value": "{color.feedback.error}", "$type": "color" },
+      "background":       { "$value": "#fef2f2", "$type": "color" }
+    }
+  },
+  "density": {
+    "compact": {
+      "spacing-x":  { "$value": "{spacing.2}", "$type": "dimension" },
+      "spacing-y":  { "$value": "{spacing.1}", "$type": "dimension" },
+      "font-size":  { "$value": "{font.size.sm}", "$type": "dimension" }
+    },
+    "default": {
+      "spacing-x":  { "$value": "{spacing.4}", "$type": "dimension" },
+      "spacing-y":  { "$value": "{spacing.2}", "$type": "dimension" },
+      "font-size":  { "$value": "{font.size.base}", "$type": "dimension" }
+    },
+    "comfortable": {
+      "spacing-x":  { "$value": "{spacing.6}", "$type": "dimension" },
+      "spacing-y":  { "$value": "{spacing.3}", "$type": "dimension" },
+      "font-size":  { "$value": "{font.size.md}", "$type": "dimension" }
+    }
+  }
+}

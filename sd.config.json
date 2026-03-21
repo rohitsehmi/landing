@@ -1,0 +1,39 @@
+{
+  "source": [
+    "tokens/primitives.json",
+    "tokens/typography.json",
+    "tokens/elevation.json",
+    "tokens/states.json",
+    "tokens/motion.json",
+    "tokens/icons.json",
+    "tokens/semantic.json"
+  ],
+  "platforms": {
+    "css-light": {
+      "transformGroup": "css",
+      "buildPath": "styles/",
+      "files": [
+        {
+          "destination": "tokens.css",
+          "format": "css/variables",
+          "options": { "selector": ":root, [data-theme='light']" }
+        }
+      ]
+    },
+    "css-dark": {
+      "source": [
+        "tokens/primitives.json",
+        "tokens/themes/dark.json"
+      ],
+      "transformGroup": "css",
+      "buildPath": "styles/",
+      "files": [
+        {
+          "destination": "tokens-dark.css",
+          "format": "css/variables",
+          "options": { "selector": "[data-theme='dark']" }
+        }
+      ]
+    }
+  }
+}

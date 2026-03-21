@@ -1,0 +1,33 @@
+{
+  "color": {
+    "brand": {
+      "primary":   { "$value": "{color.blue.600}", "$type": "color" },
+      "secondary": { "$value": "{color.blue.400}", "$type": "color" },
+      "subtle":    { "$value": "{color.blue.50}",  "$type": "color" }
+    },
+    "surface": {
+      "default":   { "$value": "{color.neutral.0}",   "$type": "color" },
+      "subtle":    { "$value": "{color.neutral.50}",  "$type": "color" },
+      "muted":     { "$value": "{color.neutral.100}", "$type": "color" },
+      "inverse":   { "$value": "{color.neutral.900}", "$type": "color" }
+    },
+    "text": {
+      "default":   { "$value": "{color.neutral.900}", "$type": "color" },
+      "muted":     { "$value": "{color.neutral.500}", "$type": "color" },
+      "subtle":    { "$value": "{color.neutral.400}", "$type": "color" },
+      "on-brand":  { "$value": "{color.neutral.0}",   "$type": "color" },
+      "inverse":   { "$value": "{color.neutral.0}",   "$type": "color" }
+    },
+    "border": {
+      "default":   { "$value": "{color.neutral.200}", "$type": "color" },
+      "subtle":    { "$value": "{color.neutral.100}", "$type": "color" },
+      "strong":    { "$value": "{color.neutral.400}", "$type": "color" }
+    },
+    "feedback": {
+      "error":     { "$value": "#dc2626", "$type": "color" },
+      "warning":   { "$value": "#d97706", "$type": "color" },
+      "success":   { "$value": "#16a34a", "$type": "color" },
+      "info":      { "$value": "{color.blue.600}", "$type": "color" }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "_meta": {
+    "description": "Deprecated tokens — migrate to replacement before next major version.",
+    "format": "oldName: { replacement, removedIn, reason }"
+  },
+  "deprecated": {}
+}

@@ -1,0 +1,43 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Try again",
+    "back": "Back",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete"
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "signIn": "Sign in",
+    "signOut": "Sign out"
+  },
+  "auth": {
+    "email": "Email address",
+    "password": "Password",
+    "name": "Full name",
+    "signIn": "Sign in",
+    "signUp": "Create account",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?"
+  },
+  "waitlist": {
+    "heading": "Join the waitlist",
+    "description": "Be the first to know when we launch.",
+    "emailPlaceholder": "Enter your email",
+    "submit": "Join waitlist",
+    "success": "You are on the list.",
+    "duplicate": "You are already on the waitlist.",
+    "error": "Something went wrong. Please try again."
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "unauthorized": "You need to sign in to access this page",
+    "serverError": "A server error occurred"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "icon": {
+    "size": {
+      "xs": { "$value": "12px", "$type": "dimension" },
+      "sm": { "$value": "16px", "$type": "dimension" },
+      "md": { "$value": "20px", "$type": "dimension" },
+      "lg": { "$value": "24px", "$type": "dimension" },
+      "xl": { "$value": "32px", "$type": "dimension" }
+    },
+    "color": {
+      "default":  { "$value": "{color.text.default}",  "$type": "color" },
+      "muted":    { "$value": "{color.text.muted}",    "$type": "color" },
+      "on-brand": { "$value": "{color.text.on-brand}", "$type": "color" },
+      "error":    { "$value": "{color.feedback.error}","$type": "color" },
+      "success":  { "$value": "{color.feedback.success}","$type": "color" }
+    }
+  }
+}

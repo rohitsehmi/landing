@@ -1,0 +1,29 @@
+{
+  "theme": {
+    "surface": {
+      "page":      { "$value": "{color.neutral.0}",   "$type": "color" },
+      "default":   { "$value": "{color.neutral.0}",   "$type": "color" },
+      "subtle":    { "$value": "{color.neutral.50}",  "$type": "color" },
+      "muted":     { "$value": "{color.neutral.100}", "$type": "color" },
+      "inverse":   { "$value": "{color.neutral.900}", "$type": "color" }
+    },
+    "text": {
+      "default":   { "$value": "{color.neutral.900}", "$type": "color" },
+      "muted":     { "$value": "{color.neutral.500}", "$type": "color" },
+      "subtle":    { "$value": "{color.neutral.400}", "$type": "color" },
+      "disabled":  { "$value": "{color.neutral.300}", "$type": "color" },
+      "inverse":   { "$value": "{color.neutral.0}",   "$type": "color" },
+      "on-brand":  { "$value": "{color.neutral.0}",   "$type": "color" }
+    },
+    "border": {
+      "default":   { "$value": "{color.neutral.200}", "$type": "color" },
+      "subtle":    { "$value": "{color.neutral.100}", "$type": "color" },
+      "strong":    { "$value": "{color.neutral.400}", "$type": "color" }
+    },
+    "brand": {
+      "primary":   { "$value": "{color.blue.600}", "$type": "color" },
+      "hover":     { "$value": "{color.blue.700}", "$type": "color" },
+      "subtle":    { "$value": "{color.blue.50}",  "$type": "color" }
+    }
+  }
+}
