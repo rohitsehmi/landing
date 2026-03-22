@@ -2,7 +2,7 @@
  * Do not edit directly, this file was auto-generated.
  */
 
-[data-theme='dark'] {
+[data-brand='b'] {
   --color-blue-50: #eff6ff;
   --color-blue-100: #dbeafe;
   --color-blue-200: #bfdbfe;
@@ -66,21 +66,25 @@
   --radius-lg: 12px;
   --radius-xl: 16px;
   --radius-full: 9999px;
-  --theme-surface-page: #030712;
-  --theme-surface-default: #111827;
-  --theme-surface-subtle: #1f2937;
-  --theme-surface-muted: #374151;
-  --theme-surface-inverse: #ffffff;
-  --theme-text-default: #f9fafb;
-  --theme-text-muted: #9ca3af;
-  --theme-text-subtle: #6b7280;
-  --theme-text-disabled: #4b5563;
-  --theme-text-inverse: #111827;
-  --theme-text-on-brand: #ffffff;
-  --theme-border-default: #374151;
-  --theme-border-subtle: #1f2937;
-  --theme-border-strong: #6b7280;
-  --theme-brand-primary: #3b82f6;
-  --theme-brand-hover: #60a5fa;
-  --theme-brand-subtle: rgba(59, 130, 246, 0.15);
+  --theme-surface-page: #faf7f2;
+  --theme-surface-default: #f0eae0;
+  --theme-surface-subtle: #eae3d8;
+  --theme-surface-muted: #ddd5c8;
+  --theme-surface-inverse: #1c1814;
+  --theme-text-default: #1c1814;
+  --theme-text-muted: #7c7068;
+  --theme-text-subtle: #7c7068;
+  --theme-text-disabled: #ddd5c8;
+  --theme-text-inverse: #faf7f2;
+  --theme-text-on-brand: #faf7f2;
+  --theme-border-default: #ddd5c8;
+  --theme-border-subtle: #f0eae0;
+  --theme-border-strong: #7c7068;
+  --theme-brand-primary: #d94f30;
+  --theme-brand-hover: #1c1814;
+  --theme-brand-subtle: #f0eae0;
+  --brand-radius: 4px;
+  --brand-font-weight-display: 400;
+  --brand-letter-spacing-display: -0.025em;
+  --brand-letter-spacing-label: 0.1em;
 }

@@ -136,7 +136,7 @@ export default async function OGImage() {
             }}
           >
             <span style={{ color: '#374151', fontSize: 14 }}>
-              [YOUR_DOMAIN]
+              deesyn.com
             </span>
             <div
               style={{

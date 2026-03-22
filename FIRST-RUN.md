@@ -41,8 +41,8 @@ Open Cursor or VS Code → `Cmd+Shift+H` → replace across all files:
 | Find | Replace with |
 |---|---|
 | `Landing` | Your project name e.g. `ClearPath` |
-| `[YOUR_DOMAIN]` | Your sending domain e.g. `clearpath.app` |
-| `[YOUR_EMAIL]` | Your notification email e.g. `ro@deesyn.com` |
+| `deesyn.com` | Your sending domain e.g. `clearpath.app` |
+| `hello@deesyn.com` | Your notification email e.g. `ro@deesyn.com` |
 | `landing` | Lowercase kebab e.g. `clearpath` |
 
 - [ ] All four replacements done

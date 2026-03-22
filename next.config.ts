@@ -1,3 +1,4 @@
+import { withSentryConfig } from '@sentry/nextjs'
 import type { NextConfig } from 'next'
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
@@ -30,11 +31,18 @@ const nextConfig: NextConfig = {
       },
     ]
   },
-
-  // Enforce bundle size limits — fails build if exceeded
-  experimental: {
-    bundlePagesRouterDependencies: true,
-  },
 }
 
-module.exports = withBundleAnalyzer(nextConfig)
+export default withSentryConfig(withBundleAnalyzer(nextConfig), {
+  org: 'deesyn',
+  project: 'javascript-nextjs',
+  silent: !process.env.CI,
+  widenClientFileUpload: true,
+  tunnelRoute: '/monitoring',
+  webpack: {
+    automaticVercelMonitors: true,
+    treeshake: {
+      removeDebugLogging: true,
+    },
+  },
+})

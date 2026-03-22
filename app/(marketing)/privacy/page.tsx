@@ -47,7 +47,7 @@ export default function PrivacyPage() {
         },
         {
           heading: 'Your rights',
-          body: 'Under GDPR, you have the right to access, correct, or delete your data at any time. Contact us at hello@[YOUR_DOMAIN] to exercise these rights.',
+          body: 'Under GDPR, you have the right to access, correct, or delete your data at any time. Contact us at hello@deesyn.com to exercise these rights.',
         },
         {
           heading: 'Data retention',
@@ -55,7 +55,7 @@ export default function PrivacyPage() {
         },
         {
           heading: 'Contact',
-          body: 'For any privacy-related questions, email us at hello@[YOUR_DOMAIN].',
+          body: 'For any privacy-related questions, email us at hello@deesyn.com.',
         },
       ].map(({ heading, body }) => (
         <section key={heading} style={{ marginBottom: 'var(--spacing-10)' }}>

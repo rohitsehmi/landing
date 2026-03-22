@@ -1,0 +1,35 @@
+{
+  "theme": {
+    "surface": {
+      "page":    { "$value": "{color.dir-b.page}",    "$type": "color" },
+      "default": { "$value": "{color.dir-b.surface}",  "$type": "color" },
+      "subtle":  { "$value": "{color.dir-b.surface-hover}", "$type": "color" },
+      "muted":   { "$value": "{color.dir-b.border}",  "$type": "color" },
+      "inverse": { "$value": "{color.dir-b.text}",    "$type": "color" }
+    },
+    "text": {
+      "default":  { "$value": "{color.dir-b.text}",       "$type": "color" },
+      "muted":    { "$value": "{color.dir-b.text-muted}", "$type": "color" },
+      "subtle":   { "$value": "{color.dir-b.text-muted}", "$type": "color" },
+      "disabled": { "$value": "{color.dir-b.border}",     "$type": "color" },
+      "inverse":  { "$value": "{color.dir-b.page}",       "$type": "color" },
+      "on-brand": { "$value": "{color.dir-b.accent-fg}",  "$type": "color" }
+    },
+    "border": {
+      "default": { "$value": "{color.dir-b.border}",   "$type": "color" },
+      "subtle":  { "$value": "{color.dir-b.surface}",  "$type": "color" },
+      "strong":  { "$value": "{color.dir-b.text-muted}", "$type": "color" }
+    },
+    "brand": {
+      "primary": { "$value": "{color.dir-b.accent}",    "$type": "color" },
+      "hover":   { "$value": "{color.dir-b.text}",      "$type": "color" },
+      "subtle":  { "$value": "{color.dir-b.surface}",   "$type": "color" }
+    }
+  },
+  "brand": {
+    "radius": { "$value": "4px", "$type": "dimension" },
+    "font-weight-display": { "$value": "400", "$type": "fontWeight" },
+    "letter-spacing-display": { "$value": "-0.025em", "$type": "dimension" },
+    "letter-spacing-label": { "$value": "0.1em", "$type": "dimension" }
+  }
+}
