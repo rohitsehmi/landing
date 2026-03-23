@@ -7,7 +7,7 @@ type ConsentState = 'pending' | 'accepted' | 'declined'
 
 const CONSENT_KEY = 'cookie-consent'
 
-export function CookieConsent() {
+export function CookieConsent(){
   const [state, setState] = useState<ConsentState | null>(null)
   const [visible, setVisible] = useState(false)
 
@@ -74,6 +74,7 @@ export function CookieConsent() {
         See our{' '}
         <a
           href="/privacy"
+          data-testid="cookie-privacy-link"
           style={{ color: 'var(--color-brand-primary)', textDecoration: 'underline' }}
         >
           privacy policy
@@ -84,6 +85,7 @@ export function CookieConsent() {
       <div style={{ display: 'flex', gap: '8px', justifyContent: 'flex-end' }}>
         <button
           onClick={decline}
+          data-testid="cookie-decline"
           style={{
             padding: '8px 16px',
             borderRadius: 'var(--radius-md)',
@@ -99,6 +101,7 @@ export function CookieConsent() {
         </button>
         <button
           onClick={accept}
+          data-testid="cookie-accept"
           style={{
             padding: '8px 16px',
             borderRadius: 'var(--radius-md)',

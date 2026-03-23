@@ -8,7 +8,7 @@ const defaultLinks = [
   { label: 'LinkedIn', href: 'https://linkedin.com/company/deesyn' },
 ]
 
-export function Footer({ links = defaultLinks }: FooterProps) {
+export function Footer({ links = defaultLinks }: FooterProps){
   return (
     <footer
       style={{
@@ -38,6 +38,7 @@ export function Footer({ links = defaultLinks }: FooterProps) {
           <a
             key={link.label}
             href={link.href}
+            data-testid={`footer-link-${link.label.toLowerCase()}`}
             style={{
               fontSize: '0.8125rem',
               color: 'var(--theme-text-muted)',

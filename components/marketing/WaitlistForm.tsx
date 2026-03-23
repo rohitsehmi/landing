@@ -3,6 +3,8 @@
 import { useState } from 'react'
 import { motion, useReducedMotion } from 'motion/react'
 import { trackEvent } from '@/lib/analytics'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
 
 interface WaitlistFormProps {
   eyebrow?: string
@@ -16,7 +18,7 @@ export function WaitlistForm({
   headline = 'Be first to work with us.',
   subline = 'We take a limited number of new clients each quarter. Leave your email and we\'ll be in touch.',
   id = 'waitlist',
-}: WaitlistFormProps) {
+}: WaitlistFormProps){
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const prefersReduced = useReducedMotion()
@@ -110,11 +112,12 @@ export function WaitlistForm({
             onSubmit={handleSubmit}
             style={{ display: 'flex', gap: 0, maxWidth: 440, margin: '0 auto' }}
             aria-label="Waitlist signup form"
+            data-testid="waitlist-form"
           >
             <label htmlFor="waitlist-email" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(0,0,0,0)' }}>
               Email address
             </label>
-            <input
+            <Input
               id="waitlist-email"
               type="email"
               value={email}
@@ -122,6 +125,7 @@ export function WaitlistForm({
               placeholder="your@email.com"
               required
               disabled={status === 'loading'}
+              data-testid="waitlist-email-input"
               style={{
                 flex: 1,
                 padding: '12px 16px',
@@ -135,13 +139,14 @@ export function WaitlistForm({
                 fontFamily: 'var(--font-body)',
               }}
             />
-            <button
+            <Button
               type="submit"
               disabled={status === 'loading' || !email}
+              data-testid="waitlist-submit-button"
               style={{
                 padding: '12px 22px',
                 backgroundColor: 'var(--theme-brand-primary)',
-                color: 'var(--theme-text-on-brand, #fff)',
+                color: 'var(--theme-text-on-brand)',
                 border: 'none',
                 borderRadius: '0 var(--brand-radius, var(--radius-md)) var(--brand-radius, var(--radius-md)) 0',
                 fontSize: '0.875rem',
@@ -154,12 +159,12 @@ export function WaitlistForm({
               }}
             >
               {status === 'loading' ? 'Sending…' : 'Notify me'}
-            </button>
+            </Button>
           </form>
         )}
 
         {status === 'error' && (
-          <p role="alert" style={{ marginTop: 12, fontSize: '0.875rem', color: 'var(--state-error-color, #dc2626)' }}>
+          <p role="alert" style={{ marginTop: 12, fontSize: '0.875rem', color: 'var(--state-error-color)' }}>
             Something went wrong — please try again.
           </p>
         )}

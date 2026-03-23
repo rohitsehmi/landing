@@ -15,7 +15,7 @@ const navLinks = [
   { label: 'FAQ', href: '#faq' },
 ]
 
-export function Header({ ctaLabel = 'Join waitlist', ctaHref = '#waitlist' }: HeaderProps) {
+export function Header({ ctaLabel = 'Join waitlist', ctaHref = '#waitlist' }: HeaderProps){
   const [scrolled, setScrolled] = useState(false)
   const prefersReduced = useReducedMotion()
 
@@ -48,6 +48,7 @@ export function Header({ ctaLabel = 'Join waitlist', ctaHref = '#waitlist' }: He
     >
       <a
         href="/"
+        data-testid="header-logo"
         style={{
           fontFamily: 'var(--font-display)',
           fontSize: '1.0625rem',
@@ -67,6 +68,7 @@ export function Header({ ctaLabel = 'Join waitlist', ctaHref = '#waitlist' }: He
           <a
             key={link.label}
             href={link.href}
+            data-testid={`nav-link-${link.label.toLowerCase()}`}
             style={{
               fontSize: '0.875rem',
               color: 'var(--theme-text-muted)',
@@ -82,13 +84,14 @@ export function Header({ ctaLabel = 'Join waitlist', ctaHref = '#waitlist' }: He
         <a
           href={ctaHref}
           onClick={() => trackEvent({ name: 'cta_click', props: { label: ctaLabel, location: 'nav' } })}
+          data-testid="header-cta"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
             padding: '8px 18px',
             borderRadius: 'var(--brand-radius, var(--radius-md))',
             backgroundColor: 'var(--theme-brand-primary)',
-            color: 'var(--theme-text-on-brand, #fff)',
+            color: 'var(--theme-text-on-brand)',
             fontSize: '0.8125rem',
             fontWeight: 500,
             textDecoration: 'none',

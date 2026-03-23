@@ -118,7 +118,7 @@ const faqs = [
 
 // ── Page ──────────────────────────────────────────────────────────────────────
 
-export default function HomePage() {
+export default function HomePage(){
   useScrollDepthTracking()
 
   return (

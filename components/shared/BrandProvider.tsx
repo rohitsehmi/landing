@@ -11,7 +11,7 @@ interface BrandContextValue {
 
 const BrandContext = createContext<BrandContextValue | undefined>(undefined)
 
-export function useBrand() {
+export function useBrand(): BrandContextValue {
   const ctx = useContext(BrandContext)
   if (!ctx) throw new Error('useBrand must be used within BrandProvider')
   return ctx
@@ -22,7 +22,7 @@ interface BrandProviderProps {
   defaultBrand?: BrandDirection
 }
 
-export function BrandProvider({ children, defaultBrand = 'a' }: BrandProviderProps) {
+export function BrandProvider({ children, defaultBrand = 'a' }: BrandProviderProps){
   const [brand, setBrandState] = useState<BrandDirection>(defaultBrand)
 
   useEffect(() => {

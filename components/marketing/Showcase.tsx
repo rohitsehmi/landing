@@ -14,7 +14,7 @@ interface ShowcaseProps {
   items: ShowcaseItem[]
 }
 
-function ShowcaseRow({ item, index }: { item: ShowcaseItem; index: number }) {
+function ShowcaseRow({ item, index }: { item: ShowcaseItem; index: number }){
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
   const prefersReduced = useReducedMotion()
@@ -122,7 +122,7 @@ function ShowcaseRow({ item, index }: { item: ShowcaseItem; index: number }) {
   )
 }
 
-export function Showcase({ items }: ShowcaseProps) {
+export function Showcase({ items }: ShowcaseProps){
   return (
     <section
       id="showcase"

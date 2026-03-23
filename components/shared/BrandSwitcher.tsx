@@ -8,7 +8,7 @@ const directions: { id: BrandDirection; label: string; desc: string }[] = [
   { id: 'c', label: 'C', desc: 'Bold & Systemic' },
 ]
 
-export function BrandSwitcher() {
+export function BrandSwitcher(){
   const { brand, setBrand } = useBrand()
 
   return (
@@ -26,7 +26,7 @@ export function BrandSwitcher() {
       }}
       aria-label="Brand direction switcher"
     >
-      <p style={{ fontSize: '0.5625rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(128,128,128,0.6)', marginBottom: 2 }}>
+      <p style={{ fontSize: '0.5625rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--theme-text-subtle)', marginBottom: 2 }}>
         Direction
       </p>
       <div style={{ display: 'flex', gap: 6 }}>
@@ -42,9 +42,9 @@ export function BrandSwitcher() {
                 width: 36,
                 height: 36,
                 borderRadius: 6,
-                border: active ? '1.5px solid currentColor' : '1px solid rgba(128,128,128,0.25)',
-                background: active ? 'var(--theme-brand-primary, #000)' : 'rgba(255,255,255,0.08)',
-                color: active ? 'var(--theme-text-on-brand, #fff)' : 'rgba(128,128,128,0.7)',
+                border: active ? '1.5px solid currentColor' : '1px solid var(--theme-border-default)',
+                background: active ? 'var(--theme-brand-primary)' : 'var(--theme-surface-subtle)',
+                color: active ? 'var(--theme-text-on-brand)' : 'var(--theme-text-muted)',
                 fontSize: '0.75rem',
                 fontWeight: active ? 600 : 400,
                 letterSpacing: '0.04em',

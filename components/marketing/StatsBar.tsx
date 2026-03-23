@@ -12,7 +12,7 @@ interface StatsBarProps {
   stats: Stat[]
 }
 
-export function StatsBar({ stats }: StatsBarProps) {
+export function StatsBar({ stats }: StatsBarProps){
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true })
   const prefersReduced = useReducedMotion()
