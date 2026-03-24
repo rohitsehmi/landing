@@ -6,6 +6,7 @@ import { BrandSwitcher } from '@/components/shared/BrandSwitcher'
 import { SkipToContent } from '@/components/shared/SkipToContent'
 import { CookieConsent } from '@/components/shared/CookieConsent'
 import { WebsiteSchema, OrganizationSchema } from '@/components/seo/StructuredData'
+import { TooltipProvider } from '@/components/ui/tooltip'
 import '@/styles/globals.css'
 import '@/styles/tokens.css'
 import '@/styles/tokens-dark.css'
@@ -82,12 +83,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <BrandProvider defaultBrand="a">
           <ThemeProvider defaultTheme="system">
-            <SkipToContent />
-            <main id="main-content">
-              {children}
-            </main>
-            <BrandSwitcher />
-            <CookieConsent />
+            <TooltipProvider>
+              <SkipToContent />
+              <main id="main-content">
+                {children}
+              </main>
+              <BrandSwitcher />
+              <CookieConsent />
+            </TooltipProvider>
           </ThemeProvider>
         </BrandProvider>
 
