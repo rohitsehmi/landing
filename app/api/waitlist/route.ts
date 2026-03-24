@@ -11,8 +11,8 @@ import type { ApiResponse } from '@/types'
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 const PROJECT_NAME = 'Landing'
-const FROM_ADDRESS = `${PROJECT_NAME} <hello@[YOUR_DOMAIN]>`
-const NOTIFY_EMAIL = '[YOUR_EMAIL]'
+const FROM_ADDRESS = `${PROJECT_NAME} <hello@deesyn.com>`
+const NOTIFY_EMAIL = 'hello@deesyn.com'
 const PROJECT_URL  = process.env.NEXT_PUBLIC_APP_URL ?? 'https://yourproject.com'
 
 export async function POST(request: NextRequest) {
@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
     const parsed = waitlistSchema.safeParse(body)
     if (!parsed.success) {
       return NextResponse.json<ApiResponse>(
-        { error: parsed.error.errors[0].message },
+        { error: parsed.error.issues[0].message },
         { status: 400 }
       )
     }

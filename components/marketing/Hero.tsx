@@ -25,7 +25,7 @@ export function Hero({
   onCtaClick,
   badge,
   className,
-}: HeroProps) {
+}: HeroProps){
   const prefersReduced = useReducedMotion()
 
   const variants = {
@@ -111,6 +111,7 @@ export function Hero({
           <a
             href={ctaHref}
             onClick={handleCta}
+            data-testid="hero-cta"
             style={{
               display: 'inline-flex',
               alignItems: 'center',

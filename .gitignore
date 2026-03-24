@@ -35,3 +35,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Sentry Config File
+.env.sentry-build-plugin
+
+# Local tool config (may contain tokens)
+.claude/settings.local.json
+.mcp.json
+.cursor/mcp.json

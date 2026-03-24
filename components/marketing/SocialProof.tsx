@@ -15,9 +15,10 @@ interface WaitlistCounterProps {
 }
 
 // Logo bar — shows company/partner logos
-export function LogoBar({ label = 'Trusted by teams at', logos }: LogoBarProps) {
+export function LogoBar({ label = 'Trusted by teams at', logos }: LogoBarProps){
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true })
+  const prefersReduced = useReducedMotion()
 
   return (
     <div
@@ -43,10 +44,10 @@ export function LogoBar({ label = 'Trusted by teams at', logos }: LogoBarProps) 
             alt={logo.name}
             height={28}
             initial={{ opacity: 0 }}
-            animate={inView ? { opacity: 0.5 } : {}}
-            whileHover={{ opacity: 1 }}
-            transition={{ duration: 0.3, delay: i * 0.05 }}
-            style={{ filter: 'grayscale(100%)', transition: 'filter 0.2s' }}
+            animate={inView ? { opacity: prefersReduced ? 1 : 0.5 } : {}}
+            whileHover={prefersReduced ? undefined : { opacity: 1 }}
+            transition={{ duration: prefersReduced ? 0 : 0.3, delay: prefersReduced ? 0 : i * 0.05 }}
+            style={{ filter: 'grayscale(100%)', transition: prefersReduced ? 'none' : 'filter 0.2s' }}
           />
         ))}
       </div>
@@ -55,7 +56,7 @@ export function LogoBar({ label = 'Trusted by teams at', logos }: LogoBarProps) 
 }
 
 // Animated waitlist counter
-export function WaitlistCounter({ count, label = 'people already on the waitlist' }: WaitlistCounterProps) {
+export function WaitlistCounter({ count, label = 'people already on the waitlist' }: WaitlistCounterProps){
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true })
   const prefersReduced = useReducedMotion()

@@ -51,8 +51,8 @@
 
 In `app/api/waitlist/route.ts` replace:
 - `Landing` → your project name
-- `[YOUR_DOMAIN]` → your domain e.g. `clearpath.app`
-- `[YOUR_EMAIL]` → your personal email for notifications
+- `deesyn.com` → your domain e.g. `clearpath.app`
+- `hello@deesyn.com` → your personal email for notifications
 
 ---
 

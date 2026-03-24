@@ -5,23 +5,25 @@
 
 ## Current Phase
 
-**Phase:** [e.g. 1 — Foundation / 2 — Core Features / 3 — Polish / 4 — Launch]
-**Sprint goal:** [One sentence — what done looks like this week]
+**Phase:** 1 — Foundation
+**Sprint goal:** Complete initial setup and get the landing page live with waitlist capture
 
 ---
 
 ## Feature List
 
 ### 🔴 In Progress
-- [ ] [Feature name] — [brief description]
+- [ ] Landing page copy and design
 
 ### 🟡 Up Next
-- [ ] [Feature name]
-- [ ] [Feature name]
+- [ ] Vercel deploy
+- [ ] Brand direction — still exploring, all three (A/B/C) active
 
 ### 🟢 Done
 - [x] Project setup
 - [x] Folder structure
+- [x] Initial setup — env vars, fonts, tokens
+- [x] Waitlist form wired to Supabase + Resend + Upstash rate limiting
 
 ### ⛔ Blocked
 - [ ] [Feature name] — blocked by: [reason]

@@ -1,5 +1,11 @@
 {
   "extendedThinking": true,
+  "mcpServers": {
+    "figma-console": {
+      "command": "/usr/local/bin/node",
+      "args": ["/Users/rohitsehmi/Downloads/figma-console-mcp-latest/dist/local.js"]
+    }
+  },
   "hooks": {
     "SessionStart": [
       {

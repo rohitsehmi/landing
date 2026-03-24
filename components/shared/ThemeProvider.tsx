@@ -12,7 +12,7 @@ interface ThemeContextValue {
 
 const ThemeContext = createContext<ThemeContextValue | undefined>(undefined)
 
-export function useTheme() {
+export function useTheme(): ThemeContextValue {
   const ctx = useContext(ThemeContext)
   if (!ctx) throw new Error('useTheme must be used within ThemeProvider')
   return ctx
@@ -28,7 +28,7 @@ export function ThemeProvider({
   children,
   defaultTheme = 'system',
   storageKey = 'theme',
-}: ThemeProviderProps) {
+}: ThemeProviderProps){
   const [theme, setThemeState] = useState<Theme>(defaultTheme)
   const [resolvedTheme, setResolvedTheme] = useState<'light' | 'dark'>('light')
 

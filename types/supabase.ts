@@ -33,11 +33,12 @@ export interface Database {
           name?: string | null
           created_at?: string
         }
+        Relationships: []
       }
-      // Add more tables here after running supabase gen types
     }
     Views: Record<string, never>
     Functions: Record<string, never>
     Enums: Record<string, never>
+    CompositeTypes: Record<string, never>
   }
 }

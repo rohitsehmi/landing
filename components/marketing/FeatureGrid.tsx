@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import { motion, useInView, useReducedMotion } from 'motion/react'
 import { cn } from '@/lib/utils'
 import { trackEvent } from '@/lib/analytics'
+import { Card, CardContent } from '@/components/ui/card'
 import type { LucideIcon } from 'lucide-react'
 
 interface Feature {
@@ -23,7 +24,7 @@ interface FeatureGridProps {
 
 export function FeatureGrid({
   eyebrow, headline, subline, features, columns = 3, className,
-}: FeatureGridProps) {
+}: FeatureGridProps){
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true, margin: '-80px' })
   const prefersReduced = useReducedMotion()
@@ -88,38 +89,40 @@ export function FeatureGrid({
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.4, delay: prefersReduced ? 0 : i * 0.08 }}
               onViewportEnter={() => trackEvent({ name: 'feature_view', props: { feature: feature.title } })}
-              style={{
-                padding: 'var(--spacing-8)',
-                borderRadius: 'var(--radius-xl)',
-                border: '1px solid var(--theme-border-default)',
-                backgroundColor: 'var(--theme-surface-default)',
-                boxShadow: 'var(--elevation-card)',
-              }}
             >
-              <div style={{
-                width: 44, height: 44,
-                borderRadius: 'var(--radius-lg)',
-                backgroundColor: 'var(--color-brand-subtle)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                marginBottom: 'var(--spacing-4)',
+              <Card style={{
+                backgroundColor: 'var(--theme-surface-default)',
+                borderColor: 'var(--theme-border-default)',
+                boxShadow: 'var(--elevation-card)',
+                height: '100%',
               }}>
-                <Icon size={20} style={{ color: 'var(--color-brand-primary)' }} />
-              </div>
-              <h3 style={{
-                fontSize: 'var(--text-body-lg)',
-                fontWeight: 'var(--font-weight-semibold)',
-                color: 'var(--theme-text-default)',
-                marginBottom: 'var(--spacing-2)',
-              }}>
-                {feature.title}
-              </h3>
-              <p style={{
-                fontSize: 'var(--text-body-sm)',
-                color: 'var(--theme-text-muted)',
-                lineHeight: 'var(--font-line-height-relaxed)',
-              }}>
-                {feature.description}
-              </p>
+                <CardContent style={{ padding: 'var(--spacing-8)' }}>
+                  <div style={{
+                    width: 44, height: 44,
+                    borderRadius: 'var(--radius-lg)',
+                    backgroundColor: 'var(--theme-brand-subtle, var(--theme-surface-subtle))',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                    marginBottom: 'var(--spacing-4)',
+                  }}>
+                    <Icon size={20} style={{ color: 'var(--theme-brand-primary)' }} />
+                  </div>
+                  <h3 style={{
+                    fontSize: 'var(--text-body-lg)',
+                    fontWeight: 'var(--font-weight-semibold)',
+                    color: 'var(--theme-text-default)',
+                    marginBottom: 'var(--spacing-2)',
+                  }}>
+                    {feature.title}
+                  </h3>
+                  <p style={{
+                    fontSize: 'var(--text-body-sm)',
+                    color: 'var(--theme-text-muted)',
+                    lineHeight: 'var(--font-line-height-relaxed)',
+                  }}>
+                    {feature.description}
+                  </p>
+                </CardContent>
+              </Card>
             </motion.div>
           )
         })}

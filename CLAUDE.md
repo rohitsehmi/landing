@@ -6,8 +6,8 @@
 ## Project Overview
 
 **Name:** Landing
-**Description:** [One sentence — what it is and who it's for]
-**Status:** [Planning / In Progress / Beta / Live]
+**Description:** Marketing and waitlist site for Deesyn, a design consultancy.
+**Status:** Planning
 **Owner:** Deesyn
 
 ---
@@ -166,9 +166,9 @@ NEXT_PUBLIC_APP_URL
 
 > Update this section at the start of each session or when context shifts.
 
-**Working on:** [CURRENT_TASK]
-**Avoid touching:** [FILES_OR_AREAS_TO_LEAVE_ALONE]
-**Blocked by:** [BLOCKER_IF_ANY]
+**Working on:** Initial setup
+**Avoid touching:** components/ui/
+**Blocked by:** Env vars (Supabase, Resend, Upstash) not yet configured
 
 ---
 

@@ -34,6 +34,51 @@
           "options": { "selector": "[data-theme='dark']" }
         }
       ]
+    },
+    "css-direction-a": {
+      "source": [
+        "tokens/primitives.json",
+        "tokens/themes/direction-a.json"
+      ],
+      "transformGroup": "css",
+      "buildPath": "styles/",
+      "files": [
+        {
+          "destination": "tokens-direction-a.css",
+          "format": "css/variables",
+          "options": { "selector": "[data-brand='a']" }
+        }
+      ]
+    },
+    "css-direction-b": {
+      "source": [
+        "tokens/primitives.json",
+        "tokens/themes/direction-b.json"
+      ],
+      "transformGroup": "css",
+      "buildPath": "styles/",
+      "files": [
+        {
+          "destination": "tokens-direction-b.css",
+          "format": "css/variables",
+          "options": { "selector": "[data-brand='b']" }
+        }
+      ]
+    },
+    "css-direction-c": {
+      "source": [
+        "tokens/primitives.json",
+        "tokens/themes/direction-c.json"
+      ],
+      "transformGroup": "css",
+      "buildPath": "styles/",
+      "files": [
+        {
+          "destination": "tokens-direction-c.css",
+          "format": "css/variables",
+          "options": { "selector": "[data-brand='c']" }
+        }
+      ]
     }
   }
 }
